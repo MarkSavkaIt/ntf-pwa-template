@@ -5,7 +5,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <p>
+        <p className='text-red-700 text-2xl'>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
       </header>
