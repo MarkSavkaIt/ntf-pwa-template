@@ -8,6 +8,7 @@ function App() {
         <p className='text-red-700 text-2xl'>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <p>Cryptographics</p>
       </header>
     </div>
   );
