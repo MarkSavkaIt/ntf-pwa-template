@@ -12,6 +12,15 @@ module.exports = {
       gridTemplateColumns: {
         sidebar: "1fr 3fr",
       },
+      backgroundSize: {
+        16: "16px",
+      },
+      backgroundPosition: {
+        "search-position": "18px 14px",
+      },
+      backgroundImage: {
+        search: "url('assets/svg/search.svg')",
+      },
     },
   },
   plugins: [],
