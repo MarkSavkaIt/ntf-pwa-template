@@ -4,8 +4,8 @@ export interface IProps {}
 
 export const Footer: React.FC<IProps> = () => {
   return (
-    <div>
-      <footer>Footer</footer>
-    </div>
+    <footer className='bg-gray-mintify-300 col-span-2'>
+      <p>Footer</p>
+    </footer>
   );
 };

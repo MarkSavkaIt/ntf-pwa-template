@@ -5,7 +5,7 @@ export interface IProps {}
 
 export const Header: React.FC<IProps> = () => {
   return (
-    <header className='bg-gray-mintify-100'>
+    <header className='bg-gray-mintify-100 col-span-2'>
       <img src={logo} alt='logo' />
     </header>
   );

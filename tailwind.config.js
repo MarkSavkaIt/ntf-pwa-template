@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gray-mintify-100": "#383940",
+        "gray-mintify-100": "#25272E",
         "gray-mintify-200": "#2B2C33",
         "gray-mintify-300": "#373943",
+      },
+      gridTemplateColumns: {
+        sidebar: "1fr 3fr",
       },
     },
   },
