@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import { NonEmptyArr } from "types/special";
 
 export interface IProps {
-  titles: string[];
+  titles: NonEmptyArr<string>;
   onChange: (title: string) => void;
 }
 
-export const NavBar: React.FC<IProps> = ({ titles = [], onChange }) => {
+export const NavBar: React.FC<IProps> = ({ titles, onChange }) => {
   const [active, setActive] = useState<string>(titles[0] || "");
 
-  const onClick = (title: string): void => {
+  const onHandleClick = (title: string): void => {
     if (title !== active) {
       setActive(title);
       onChange(title);
@@ -20,8 +21,9 @@ export const NavBar: React.FC<IProps> = ({ titles = [], onChange }) => {
     <p>titles is empty</p>
   ) : (
     <div className='flex flex-row list-none'>
-      {titles.map((title) => (
+      {titles.map((title: string) => (
         <div
+          key={title}
           className={classNames(
             "cursor-pointer py-5 mx-5 border-b-2 hover:text-mintify-active duration-300",
             {
@@ -30,7 +32,7 @@ export const NavBar: React.FC<IProps> = ({ titles = [], onChange }) => {
             },
             { "border-mintify-gray-100": title !== active }
           )}
-          onClick={() => onClick(title)}
+          onClick={() => onHandleClick(title)}
         >
           {title}
         </div>
