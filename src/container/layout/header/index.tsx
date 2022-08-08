@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "assets/svg/logo.svg";
 import { NavBar } from "components/navbar";
+import { Search } from "components/search-input";
 
 export interface IProps {}
 
@@ -16,7 +17,9 @@ export const Header: React.FC<IProps> = () => {
           />
         </div>
       </div>
-      <div>abc</div>
+      <div className='flex items-center'>
+        <Search onChange={console.log} />
+      </div>
     </header>
   );
 };
