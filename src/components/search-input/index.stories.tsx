@@ -14,8 +14,11 @@ export default {
 const Template: ComponentStory<typeof Search> = (args) => <Search {...args} />;
 
 export const SearchTemplate = Template.bind({});
-SearchTemplate.args = {
-  onChange: console.log,
+SearchTemplate.args = {};
+
+export const WithConsole = Template.bind({});
+WithConsole.args = {
+  onChange: (value: string) => console.log(value),
 };
 
 // export const LoggedOut = Template.bind({});
