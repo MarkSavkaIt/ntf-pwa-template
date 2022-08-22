@@ -22,6 +22,22 @@ module.exports = {
         search: "url('assets/svg/search.svg')",
       },
     },
+    fontFamily: {
+      display: [
+        "Oswald",
+        "sans-serif",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+      ],
+    },
   },
   plugins: [],
 };
