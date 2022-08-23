@@ -3,8 +3,10 @@ import { ArrowDown } from "assets/svg/index";
 import { NonEmptyArr } from "types/special";
 import classNames from "classnames";
 
+type filterType = "checkbox" | "radio";
+
 type filter = {
-  type: string;
+  type: filterType;
   title: string;
   status: boolean;
 };
@@ -26,27 +28,31 @@ const Filter: React.FC<category> = ({ name, filters }) => {
         className='flex flex-row justify-between items-center cursor-pointer'
         onClick={() => setOpen((a) => !a)}
       >
-        <p className='text-white'>{name}</p>
-        {/* <img src={ArrowDown} alt='arrow down' /> */}
-        <ArrowDown className={classNames({ "rotate-180": isOpen })} />
+        <p className='text-white mb-2'>{name}</p>
+        <ArrowDown
+          className={classNames("duration-300 ease-in-out", {
+            "rotate-180": isOpen,
+          })}
+        />
       </span>
 
       <span
         className={classNames(
-          "text-white overflow-hidden duration-1000",
-          // "truncate",
-          isOpen ? "max-h-48" : "max-h-0"
+          "text-white overflow-hidden ease-linear duration-1000",
+          isOpen ? "max-h-56" : "max-h-0"
         )}
       >
-        Open Open Open Open
-        <br />
-        Open Open Open Open
-        <br />
-        Open Open Open Open
+        {filters.map((filter: filter) => {
+          return (
+            <span className='flex'>
+              <input type={filter.type} />
+              <label className='ml-1'>{filter.title}</label>
+            </span>
+          );
+        })}
       </span>
     </span>
   );
-  // <Filter name={category.name} filters={category.filters} />
 };
 
 export const SidebarFilter: React.FC<IProps> = ({ categories }) => {

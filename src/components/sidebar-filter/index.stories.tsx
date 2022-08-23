@@ -23,15 +23,15 @@ SidebarFilterTemplate.args = {
     {
       name: "Status",
       filters: [
-        { status: false, title: "Selling", type: "" },
-        { status: false, title: "Auction", type: "" },
+        { status: false, title: "Selling", type: "checkbox" },
+        { status: false, title: "Auction", type: "checkbox" },
       ],
     },
     {
       name: "Categories",
       filters: [
-        { status: false, title: "Cartoon", type: "" },
-        { status: false, title: "Movies", type: "" },
+        { status: false, title: "Cartoon", type: "checkbox" },
+        { status: false, title: "Movies", type: "checkbox" },
       ],
     },
   ],
